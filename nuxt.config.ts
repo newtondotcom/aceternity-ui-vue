@@ -9,6 +9,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
   compatibilityDate: '2024-07-03',
+  ssr : false,
+  modules: ['@vueuse/motion/nuxt']
 })
