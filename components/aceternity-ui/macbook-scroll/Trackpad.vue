@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="w-2/5 mx-auto h-32 rounded-xl my-1"
-    :style="trackpadStyle"
-  ></div>
+  <div class="w-2/5 mx-auto h-32 rounded-xl my-1" :style="trackpadStyle"></div>
 </template>
 
 <script setup>

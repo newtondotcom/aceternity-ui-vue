@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { ref, watch, computed } from 'vue';
+import { ref, watch, computed } from "vue";
 
 const props = defineProps({
   className: String,
@@ -58,7 +58,7 @@ watch(
   () => props.mouseInside,
   (newValue) => {
     handleAnimations(newValue);
-  }
+  },
 );
 
 const handleAnimations = (isMouseEntered) => {

@@ -1,23 +1,26 @@
 <template>
+  <div
+    :class="['py-20 flex items-center justify-center', containerClassName]"
+    :style="{ perspective: '1000px' }"
+  >
     <div
-      :class="['py-20 flex items-center justify-center', containerClassName]"
-      :style="{ perspective: '1000px' }"
+      ref="containerRef"
+      v-on:mouseover="handleMouseEnter"
+      @mousemove="handleMouseMove"
+      v-on:mouseleave="handleMouseLeave"
+      :class="[
+        'flex items-center justify-center relative transition-all duration-200 ease-linear',
+        className,
+      ]"
+      :style="{ transformStyle: 'preserve-3d' }"
     >
-      <div
-        ref="containerRef"
-        v-on:mouseover="handleMouseEnter"
-        @mousemove="handleMouseMove"
-        v-on:mouseleave="handleMouseLeave"
-        :class="['flex items-center justify-center relative transition-all duration-200 ease-linear', className]"
-        :style="{ transformStyle: 'preserve-3d' }"
-      >
-        <slot />
-      </div>
+      <slot />
     </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, watch } from 'vue';
+import { ref, onMounted, onUnmounted, watch } from "vue";
 
 const props = defineProps({
   className: String,
@@ -46,8 +49,14 @@ const handleMouseLeave = () => {
 
 const handleMouseMove = (event) => {
   if (!containerRef.value) return;
-  const { left, top, width, height } = containerRef.value.getBoundingClientRect();
-  if (event.pageX < left || event.pageX > left + width || event.pageY < top || event.pageY > top + height) {
+  const { left, top, width, height } =
+    containerRef.value.getBoundingClientRect();
+  if (
+    event.pageX < left ||
+    event.pageX > left + width ||
+    event.pageY < top ||
+    event.pageY > top + height
+  ) {
     return;
   }
   const x = (event.pageX - left - width / 2) / 25;
@@ -61,14 +70,14 @@ watch(
     if (!newVal && containerRef.value) {
       containerRef.value.style.transform = `rotateY(0deg) rotateX(0deg)`;
     }
-  }
+  },
 );
 
 onMounted(() => {
-  window.addEventListener('mousemove', handleMouseMove);
+  window.addEventListener("mousemove", handleMouseMove);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('mousemove', handleMouseMove);
+  window.removeEventListener("mousemove", handleMouseMove);
 });
 </script>

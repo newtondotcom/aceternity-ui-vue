@@ -3,12 +3,17 @@
     <div
       :class="[
         'relative flex flex-col h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900 text-slate-950 transition-bg',
-        className
+        className,
       ]"
     >
       <div class="absolute inset-0 overflow-hidden">
         <div
-          :class="[showRadialGradient ? 'mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,transparent_70%)' : '', backgroundClass]"
+          :class="[
+            showRadialGradient
+              ? 'mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,transparent_70%)'
+              : '',
+            backgroundClass,
+          ]"
         ></div>
       </div>
       <slot />
@@ -17,7 +22,7 @@
 </template>
 
 <script setup>
-const backgroundClass=`
+const backgroundClass = `
             absolute -inset-[10px] opacity-50 will-change-transform pointer-events-none
             [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)]
             [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--black)_16%)]
@@ -32,11 +37,11 @@ const backgroundClass=`
             after:dark:[background-image:var(--dark-gradient),var(--aurora)]
             after:[background-size:200%,100%]
             after:animate-aurora after:[background-attachment:fixed] after:mix-blend-difference
-            `
+            `;
 const props = defineProps({
   className: {
     type: String,
-    default: '',
+    default: "",
   },
   showRadialGradient: {
     type: Boolean,

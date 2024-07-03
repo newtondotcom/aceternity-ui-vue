@@ -1,7 +1,11 @@
 <template>
   <div class="relative perspective-800px">
     <div
-      :style="{ transform: 'perspective(800px); rotateX(-25deg); translateZ(0px);', transformOrigin: 'bottom', transformStyle: 'preserve-3d' }"
+      :style="{
+        transform: 'perspective(800px); rotateX(-25deg); translateZ(0px);',
+        transformOrigin: 'bottom',
+        transformStyle: 'preserve-3d',
+      }"
       class="h-[12rem] w-[32rem] bg-[#010101] rounded-2xl p-2 relative"
     >
       <div
@@ -18,9 +22,13 @@
       class="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
       v-motion="motionProperties"
     >
-      <div 
-      class="absolute inset-0 bg-[#272729] rounded-lg" />
-      <img :src="src" alt="aceternity logo" fill class="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full" />
+      <div class="absolute inset-0 bg-[#272729] rounded-lg" />
+      <img
+        :src="src"
+        alt="aceternity logo"
+        fill
+        class="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
+      />
     </div>
   </div>
 </template>
@@ -29,7 +37,7 @@
 //import AceternityLogo from './AceternityLogo.vue';
 
 const props = defineProps({
-motionProperties : Object,
+  motionProperties: Object,
   src: String,
 });
 </script>

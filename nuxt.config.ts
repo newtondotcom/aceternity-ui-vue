@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  css : ['~/public/main.css'],
+  css: ["~/public/main.css"],
 
   postcss: {
     plugins: {
@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  compatibilityDate: '2024-07-03',
-  ssr : false,
-  modules: ['@vueuse/motion/nuxt']
-})
+  compatibilityDate: "2024-07-03",
+  ssr: false,
+  modules: ["@vueuse/motion/nuxt"],
+});

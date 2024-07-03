@@ -1,7 +1,10 @@
 <template>
   <div class="keypad h-full rounded-md bg-[#050505] mx-1 p-1">
     <Row>
-      <KBtn class="w-10 items-end justify-start pl-[4px] pb-[2px]" childrenClassName="items-start">
+      <KBtn
+        class="w-10 items-end justify-start pl-[4px] pb-[2px]"
+        childrenClassName="items-start"
+      >
         esc
       </KBtn>
       <KBtn>
@@ -111,12 +114,18 @@
         <span class="block">+</span>
         <span class="block">=</span>
       </KBtn>
-      <KBtn class="w-10 items-end justify-end pr-[4px] pb-[2px]" childrenClassName="items-end">
+      <KBtn
+        class="w-10 items-end justify-end pr-[4px] pb-[2px]"
+        childrenClassName="items-end"
+      >
         delete
       </KBtn>
     </Row>
     <Row>
-      <KBtn class="w-10 items-end justify-start pl-[4px] pb-[2px]" childrenClassName="items-start">
+      <KBtn
+        class="w-10 items-end justify-start pl-[4px] pb-[2px]"
+        childrenClassName="items-start"
+      >
         tab
       </KBtn>
       <KBtn>
@@ -163,7 +172,10 @@
       </KBtn>
     </Row>
     <Row>
-      <KBtn class="w-[2.8rem] items-end justify-start pl-[4px] pb-[2px]" childrenClassName="items-start">
+      <KBtn
+        class="w-[2.8rem] items-end justify-start pl-[4px] pb-[2px]"
+        childrenClassName="items-start"
+      >
         caps lock
       </KBtn>
       <KBtn>
@@ -201,12 +213,18 @@
         <span class="block">"</span>
         <span class="block">'</span>
       </KBtn>
-      <KBtn class="w-[2.85rem] items-end justify-end pr-[4px] pb-[2px]" childrenClassName="items-end">
+      <KBtn
+        class="w-[2.85rem] items-end justify-end pr-[4px] pb-[2px]"
+        childrenClassName="items-end"
+      >
         return
       </KBtn>
     </Row>
     <Row>
-      <KBtn class="w-[3.65rem] items-end justify-start pl-[4px] pb-[2px]" childrenClassName="items-start">
+      <KBtn
+        class="w-[3.65rem] items-end justify-start pl-[4px] pb-[2px]"
+        childrenClassName="items-start"
+      >
         shift
       </KBtn>
       <KBtn>
@@ -242,30 +260,54 @@
         <span class="block">?</span>
         <span class="block">/</span>
       </KBtn>
-      <KBtn class="w-[3.75rem] items-end justify-end pr-[4px] pb-[2px]" childrenClassName="items-end">
+      <KBtn
+        class="w-[3.75rem] items-end justify-end pr-[4px] pb-[2px]"
+        childrenClassName="items-end"
+      >
         shift
       </KBtn>
     </Row>
     <Row>
-      <KBtn class="w-[2.8rem] items-end justify-start pl-[4px] pb-[2px]" childrenClassName="items-start">
+      <KBtn
+        class="w-[2.8rem] items-end justify-start pl-[4px] pb-[2px]"
+        childrenClassName="items-start"
+      >
         control
       </KBtn>
-      <KBtn class="items-end justify-start pl-[4px] pb-[2px]" childrenClassName="items-start">
+      <KBtn
+        class="items-end justify-start pl-[4px] pb-[2px]"
+        childrenClassName="items-start"
+      >
         option
       </KBtn>
-      <KBtn class="items-end justify-start pl-[4px] pb-[2px]" childrenClassName="items-start">
+      <KBtn
+        class="items-end justify-start pl-[4px] pb-[2px]"
+        childrenClassName="items-start"
+      >
         command
       </KBtn>
-      <KBtn class="w-36 items-end justify-center pl-[4px] pb-[2px]" childrenClassName="items-center">
+      <KBtn
+        class="w-36 items-end justify-center pl-[4px] pb-[2px]"
+        childrenClassName="items-center"
+      >
         <div class="space-bar h-full w-full" :style="spaceBarStyle"></div>
       </KBtn>
-      <KBtn class="items-end justify-end pr-[4px] pb-[2px]" childrenClassName="items-end">
+      <KBtn
+        class="items-end justify-end pr-[4px] pb-[2px]"
+        childrenClassName="items-end"
+      >
         command
       </KBtn>
-      <KBtn class="items-end justify-end pr-[4px] pb-[2px]" childrenClassName="items-end">
+      <KBtn
+        class="items-end justify-end pr-[4px] pb-[2px]"
+        childrenClassName="items-end"
+      >
         option
       </KBtn>
-      <KBtn class="w-[2.85rem] items-end justify-end pr-[4px] pb-[2px]" childrenClassName="items-end">
+      <KBtn
+        class="w-[2.85rem] items-end justify-end pr-[4px] pb-[2px]"
+        childrenClassName="items-end"
+      >
         control
       </KBtn>
     </Row>

@@ -1,6 +1,6 @@
 # ui-aceternity-vue
 
-This a non-official port of [Aceternity UI](https://ui.aceternity.com/) to Vue. 
+This a non-official port of [Aceternity UI](https://ui.aceternity.com/) to Vue.
 
 ## State
 
