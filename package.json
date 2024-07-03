@@ -10,7 +10,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@tabler/icons-vue": "^3.8.0",
+    "@vueuse/motion": "^2.2.3",
+    "clsx": "^2.1.1",
+    "core-js": "3",
     "nuxt": "^3.12.3",
+    "tailwind-merge": "^2.3.0",
     "vue": "latest"
   },
   "devDependencies": {
