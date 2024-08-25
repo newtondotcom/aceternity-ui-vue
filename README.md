@@ -14,9 +14,9 @@ This is clearly under development and no library has been published.
 - [Spotlight](https://ui.aceternity.com/components/spotlight): [Working](/spotlight)
 - [Grid & Dot Background](https://ui.aceternity.com/components/aurora-background): [Working](/backgrounds)
 
-  This requires `mini-svg-data-uri` deps, the 2 following functions in the `tailwind.config.ts` file:
+  This requires `mini-svg-data-uri` deps, the 2 following functions in the `tailwind.config.ts` file (please have a look at it):
 
-  ```javascript
+  ```typescript
   function ({ matchUtilities, theme }: any) {
     matchUtilities(
       {
